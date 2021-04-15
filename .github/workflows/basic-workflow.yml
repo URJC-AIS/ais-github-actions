@@ -10,10 +10,10 @@ jobs:
 
     runs-on: ${{matrix.os}}
     strategy: 
-        matrix:
-          fail-fast: 'false'
-          os: [macos, windows-latest, ubuntu-20.04]
-          java: ['8', '11', '13', '15']
+      fail-fast: false
+      matrix:
+        os: [macos-latest, windows-latest, ubuntu-20.04]
+        java: ['8', '11', '13', '15']
     steps:
     - uses: actions/checkout@v2
     - name: Set up JDK 11
