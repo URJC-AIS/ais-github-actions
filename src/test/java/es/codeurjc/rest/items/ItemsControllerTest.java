@@ -29,7 +29,7 @@ public class ItemsControllerTest {
 
 		// THEN
 
-		assertThat(postedItem.getDescription()).isEqualTo("Tomat");
+		assertThat(postedItem.getDescription()).isEqualTo(itemDescription);
 	
 		System.out.println("Then");
 	}
