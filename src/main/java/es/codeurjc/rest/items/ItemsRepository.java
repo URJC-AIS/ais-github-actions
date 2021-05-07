@@ -45,7 +45,7 @@ public class ItemsRepository {
         long id = lastId.incrementAndGet();
 		item.setId(id);
 		items.put(id, item);
-		return new Item();
+		return item;
     }
 
     public Item putItem(Long id, Item itemActualizado){
