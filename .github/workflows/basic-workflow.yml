@@ -5,13 +5,20 @@ on:
 
 jobs:
 
-  test:
-    runs-on: ubuntu-20.04
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ macos-latest, windows-latest, ubuntu-latest ]
+        java: [ '8', '11', '17']
+    name: Java ${{ matrix.Java }} sample
     steps:
       - uses: actions/checkout@v2
-      - name: Set up JDK 17
+      - name: ${{ matrix.os }} set up JDK ${{ matrix.Java }}
         uses: actions/setup-java@v2
         with:
           distribution: 'adopt'
-          java-version: '17'
+          java-version: ${{ matrix.java }}
+          
       - run: mvn test
