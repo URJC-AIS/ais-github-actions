@@ -25,7 +25,7 @@ public class ItemsControllerTest {
 		
 		// THEN
 
-		assertThat(postedItem.getDescription()).isEqualTo(null);
+		assertThat(postedItem.getDescription()).isEqualTo(itemDescription);
 	}
 
 }
