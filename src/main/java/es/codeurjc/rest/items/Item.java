@@ -37,5 +37,4 @@ public class Item {
 	public String toString() {
 		return "Item [id=" + id + ", description=" + description + ", checked=" + checked + "]";
 	}
-
 }
