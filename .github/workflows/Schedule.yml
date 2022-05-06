@@ -1,0 +1,19 @@
+name: Workflow3
+
+on:
+  schedule:
+    - cron: '54 16 * * *'
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: develop
+      - name: Set up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '17'
+      - name: Ejecutar test
+        run: echo hola
