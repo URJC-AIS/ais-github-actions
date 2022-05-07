@@ -20,7 +20,9 @@ A continuación, en local,  añadimos un campo nuevo a la clase Film en el códi
 ```
 $ git add .
 ```
+```
 $ git commit -m "Se ha agregado el campo director"
+```
 ```
 $ git push
 ```
