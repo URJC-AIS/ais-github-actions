@@ -1,4 +1,4 @@
-name: Continuous integration example
+name: Continuous integration example changed name
 
 on: 
   push:
