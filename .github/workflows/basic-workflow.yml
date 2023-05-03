@@ -4,7 +4,7 @@ on:
     branches:
       - 'release/**'
 env:
-  GITHUB_REF: ${{ GITHUB_BRANCH }}
+  GITHUB_REF: ${{ github.ref_name }}
 
 
 jobs:
