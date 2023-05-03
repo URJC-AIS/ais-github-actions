@@ -6,11 +6,13 @@ on:
 env:
   GITHUB_REF: ${{ github.ref }}
   BRANCH_NAME: ${{ github.ref.replace('refs/heads/', '') }}
+
 jobs:
   test:
     runs-on: ubuntu-latest
     strategy:
           fail-fast: false
+
 
     steps:
       - uses: actions/checkout@v3
