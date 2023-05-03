@@ -4,8 +4,8 @@ on:
     branches:
       - 'release/**'
 env:
-  GITHUB_REF: ${{ github.ref }}
-  BRANCH_NAME: ${{ replace(github.ref, 'refs/heads/', '') }}
+  GITHUB_REF: ${{ GITHUB_BRANCH }}
+
 
 jobs:
   test:
